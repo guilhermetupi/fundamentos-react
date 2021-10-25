@@ -1,3 +1,6 @@
-const user = {};
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log(user?.address?.street ? 'yes' : 'no');
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+);
