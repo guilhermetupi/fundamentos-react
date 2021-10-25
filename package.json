@@ -6,7 +6,7 @@
   "author": "Guilherme Tupinambá Durães <40327476+guilhermetupi@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "babel": "yarn babel src -d build"
+    "build": "babel src -d build"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
