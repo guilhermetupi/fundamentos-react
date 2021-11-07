@@ -1,11 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import Button from './Button';
+import { ThemeContext } from './ThemeContext';
 
-function Header({ title, children }) {
+function Header(props) {
+  const { onToggleTheme } = useContext(ThemeContext);
+
   return (
     <>
-      <h1>{title}</h1>
-      {children}
+      <h1>{props.title}</h1>
+      <Button onClick={() => onToggleTheme()}>Mudar tema</Button>
+      {props.children}
     </>
   );
 }
@@ -16,7 +21,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  title: "Blog do Tupizera",
+  title: 'Blog do Gui',
 };
 
 export default Header;
