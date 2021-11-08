@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PostHeader from './PostHeader';
 import styles from './Post.scss';
+import { Subtitle, Rate } from './styles';
 
 function Post(props) {
   return (
@@ -17,10 +18,8 @@ function Post(props) {
           }}
           onRemove={props.onRemove}
         />
-        <br />
-        <small>{props.post.subtitle}</small>
-        <br />
-        Likes: {props.post.likes}
+        <Subtitle>{props.post.subtitle}</Subtitle>
+        <Rate>Media: {props.post.likes / 2}</Rate>
       </article>
       <br />
     </>
